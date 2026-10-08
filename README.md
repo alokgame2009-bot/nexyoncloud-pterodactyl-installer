@@ -1,25 +1,35 @@
-# NexyonCloud Pterodactyl Manager
+## 🚀 Quick Install
 
-Real interactive Pterodactyl 1.x installer.
+Run the following command on a fresh supported server:
 
-Main menu:
+```bash
+bash <(curl -fsSL https://raw.githubusercontent.com/alokgame2009-bot/nexyoncloud-pterodactyl-installer/main/install.sh)
+```
+
+### Requirements
+
+* Ubuntu 22.04 / 24.04
+* Debian 11 / 12 / 13
+* Root access
+* Domain pointing to the server
+* Ports `80` and `443` accessible
+
+### Installer Menu
+
+```text
+╔══════════════════════════════════════════════╗
+║     NEXYONCLOUD PTERODACTYL MANAGER         ║
+╚══════════════════════════════════════════════╝
+
 1) Install Panel
 2) Update Panel
 3) Status / Health Check
 4) Uninstall Panel
 5) Exit
 
-Install Panel performs actual dependency installation, MariaDB/Redis setup, current Pterodactyl release download, Composer install, migrations/seeding, real administrator creation, NGINX configuration, Let's Encrypt HTTPS and queue/scheduler setup.
+Select an option [1-5]:
+```
 
-Requirements:
-- Root server
-- Ubuntu 22.04/24.04 or Debian 11/12/13
-- Fresh server recommended
-- DNS A/AAAA record for the panel domain must already point to the server
-- Ports 80/443 reachable for Let's Encrypt
+Select **1) Install Panel** to start the Pterodactyl installation.
 
-Run:
-sudo bash nexyoncloud-installer.sh
-
-The admin password is never hard-coded. Leaving it empty generates a random password and stores credentials at:
-`/root/nexyoncloud-pterodactyl-credentials.txt`
+The installer configures the panel, database, Redis, NGINX, HTTPS, timezone, administrator account, queue worker and scheduler.
