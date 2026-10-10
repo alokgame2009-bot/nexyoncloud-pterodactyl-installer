@@ -1,0 +1,8 @@
+.env
+*.log
+*.sql
+*.tar.gz
+*.zip
+backup/
+backups/
+.DS_Store
